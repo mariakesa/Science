@@ -1,6 +1,8 @@
 Data: https://zenodo.org/records/17488068
 Paper: https://www.cell.com/neuron/pdf/S0896-6273(25)00894-3.pdf
 
+https://www.youtube.com/@James_Lim
+
 Initial chat: chatgpt.com/g/g-p-67b49a58bff88191838dd62962204448-neuraldatascience-mitneuralcomputation/c/69d91294-3ee8-8387-9289-b5d15b606435
 
 Idea: Fit CEBRA to neural data with MoSeq syllable column in behavior
