@@ -3,6 +3,7 @@ Paper: https://www.cell.com/neuron/pdf/S0896-6273(25)00894-3.pdf
 
 https://www.youtube.com/@James_Lim
 https://learning.edx.org/course/course-v1:MITx+3.024x+1T2020/home
+https://www.youtube.com/@jasonbramburger/videos
 
 Initial chat: chatgpt.com/g/g-p-67b49a58bff88191838dd62962204448-neuraldatascience-mitneuralcomputation/c/69d91294-3ee8-8387-9289-b5d15b606435
 
@@ -26,3 +27,5 @@ syllables align with behavioral syllables?--> This is doesn't work because
 the data is z-scored binned spikes.
 
 We want to recover the latent phase space of spontaneous behavior from aligned neural and behavioral recordings. The key idea is to treat neural population activity and behavioral annotations as complementary observations of the same underlying dynamical system. In particular, we will use the neural activity matrix as the primary input and the MoSeq syllable column from the behavior table as an auxiliary variable that provides fine-scale behavioral supervision. Because the behavior rows and neural timepoints match exactly within each session, we can align them frame by frame and begin by analyzing one session at a time. A natural first step is to learn an embedding of neural activity that respects both temporal structure and behavioral structure, then test whether this latent space captures recurrent motifs, persistent states, and transitions in spontaneous behavior.
+
+Goal: Train CEBRA with embedded category vectors. 
