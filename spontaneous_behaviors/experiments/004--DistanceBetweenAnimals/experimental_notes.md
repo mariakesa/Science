@@ -1,0 +1,1 @@
+The apparent limit-cycle-like dynamics in the learned latent may arise because the animal repeatedly moves through a recurrent social interaction pattern, and inter-mouse distance is one observable of that pattern.
