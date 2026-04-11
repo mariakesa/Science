@@ -11,3 +11,5 @@ the fact that this syllable arrives in the “right” temporal context
 neurobehavioral loop
 movement-coupled neural loop
 behavior-conditioned neural limit-cycle-like manifold
+
+We do not see the loop under teacher forcing because teacher forcing injects the true held-out neural state at every step, preserving the full heterogeneity of the data. The loop emerges only in free-running rollout, where the model evolves according to its own reduced learned dynamics and can collapse onto a simpler self-consistent attractor.
