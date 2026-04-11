@@ -33,6 +33,7 @@ print("neural shape:", neural.shape)   # (T, N)
 print("aux shape:", aux.shape)         # (T,)
 print("first aux labels:", aux[:10])
 
-np.save('/home/maria/Science/data/spontaneous_behaviors/made_data/neural_rec.npy', neural)
-np.save('/home/maria/Science/data/spontaneous_behaviors/made_data/moseq_syllables_aux.npy', aux)
-np.save('/home/maria/Science/data/spontaneous_behaviors/made_data/higher_order_state.npy', state)
+#225 is for cleaning out the initial blank period
+np.save('/home/maria/Science/data/spontaneous_behaviors/made_data/neural_rec.npy', neural[228:])
+np.save('/home/maria/Science/data/spontaneous_behaviors/made_data/moseq_syllables_aux.npy', aux[228:])
+np.save('/home/maria/Science/data/spontaneous_behaviors/made_data/higher_order_state.npy', state[228:])
