@@ -1,0 +1,1 @@
+Look at generalizing the attractor code to other files.
