@@ -1,3 +1,7 @@
+“I need to become frighteningly competent in a rare technical area and create outputs that open doors.”
+
+If you want success, build a visible body of deep technical work that proves you can think, implement, and ship.
+
 https://chatgpt.com/g/g-p-67b49a58bff88191838dd62962204448/c/69da710a-5ed0-8385-8df3-48da7f9f2f4b
 
 Data: https://zenodo.org/records/17488068
