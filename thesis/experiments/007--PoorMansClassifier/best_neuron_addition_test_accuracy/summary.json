@@ -1,0 +1,48 @@
+{
+  "neural_file": "/home/maria/Science/data/hybrid_neural_responses_reduced.npy",
+  "vit_file": "/home/maria/Science/data/google_vit-base-patch16-224_embeddings_logits.pkl",
+  "vit_key": "natural_scenes",
+  "n_stimuli": 118,
+  "presentation_level_shape": [
+    118,
+    39209
+  ],
+  "stimulus_averaged_shape": [
+    118,
+    39209
+  ],
+  "clean_train_shape": [
+    94,
+    39209
+  ],
+  "clean_test_shape": [
+    24,
+    39209
+  ],
+  "n_clean_neurons": 39209,
+  "presentation_order_assumption": "block",
+  "used_explicit_stimulus_ids": false,
+  "min_presentations_per_stimulus": 1,
+  "max_presentations_per_stimulus": 1,
+  "class_counts_all": {
+    "inanimate": 55,
+    "animate": 63
+  },
+  "class_counts_train": {
+    "inanimate": 44,
+    "animate": 50
+  },
+  "class_counts_test": {
+    "inanimate": 11,
+    "animate": 13
+  },
+  "test_fraction": 0.2,
+  "max_additions": 1000,
+  "best_train_selected_k": 884,
+  "best_train_selected_test_accuracy": 0.7916666666666666,
+  "best_train_selected_test_balanced_accuracy": 0.7937062937062938,
+  "best_train_selected_test_auc": 0.8111888111888113,
+  "best_test_k_reporting_only": 401,
+  "best_test_accuracy_reporting_only": 0.7916666666666666,
+  "best_test_balanced_accuracy_reporting_only": 0.8006993006993006
+}
