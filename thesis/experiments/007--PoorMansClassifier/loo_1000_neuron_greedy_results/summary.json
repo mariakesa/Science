@@ -1,0 +1,28 @@
+{
+  "neural_file": "/home/maria/Science/data/hybrid_neural_responses_reduced.npy",
+  "vit_file": "/home/maria/Science/data/google_vit-base-patch16-224_embeddings_logits.pkl",
+  "vit_key": "natural_scenes",
+  "X_shape": [
+    118,
+    39209
+  ],
+  "n_stimuli": 118,
+  "n_neurons_total": 39209,
+  "candidate_pool_size": 1000,
+  "max_additions": 100,
+  "class_counts": {
+    "inanimate": 55,
+    "animate": 63
+  },
+  "mean_fold_stopped_at_k": 7.11864406779661,
+  "median_fold_stopped_at_k": 6.5,
+  "min_fold_stopped_at_k": 4,
+  "max_fold_stopped_at_k": 16,
+  "best_loo_balanced_accuracy_k_reporting_only": 1,
+  "best_loo_balanced_accuracy_reporting_only": 0.7481962481962482,
+  "best_loo_accuracy_at_best_balanced_k_reporting_only": 0.7372881355932204,
+  "best_loo_auc_at_best_balanced_k_reporting_only": 0.7062049062049063,
+  "best_loo_accuracy_k_reporting_only": 1,
+  "best_loo_accuracy_reporting_only": 0.7372881355932204,
+  "best_loo_balanced_accuracy_at_best_accuracy_k_reporting_only": 0.7481962481962482
+}
