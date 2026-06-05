@@ -1,0 +1,100 @@
+{
+  "experiment": "normalized_all_neuron_poor_mans_classifier",
+  "description": "Uses all cleaned neurons. Each stimulus-level population vector is L2-normalized. Class templates are means of normalized train vectors, then class templates are L2-normalized. Prediction is based on cosine similarity to animate vs inanimate templates.",
+  "neural_file": "/home/maria/Science/data/hybrid_neural_responses_reduced.npy",
+  "vit_file": "/home/maria/Science/data/google_vit-base-patch16-224_embeddings_logits.pkl",
+  "vit_key": "natural_scenes",
+  "n_stimuli": 118,
+  "presentation_level_shape": [
+    118,
+    39209
+  ],
+  "stimulus_averaged_shape": [
+    118,
+    39209
+  ],
+  "clean_train_shape": [
+    94,
+    39209
+  ],
+  "clean_test_shape": [
+    24,
+    39209
+  ],
+  "n_clean_neurons": 39209,
+  "used_all_clean_neurons": true,
+  "greedy_selection": false,
+  "standardize_neurons_using_train": false,
+  "row_l2_normalization": true,
+  "class_template_l2_normalization": true,
+  "decision_rule": "predict animate if x_hat @ (mu1_hat - mu0_hat) > 0",
+  "presentation_order_assumption": "block",
+  "used_explicit_stimulus_ids": false,
+  "min_presentations_per_stimulus": 1,
+  "max_presentations_per_stimulus": 1,
+  "class_counts_all": {
+    "inanimate": 55,
+    "animate": 63
+  },
+  "class_counts_train": {
+    "inanimate": 44,
+    "animate": 50
+  },
+  "class_counts_test": {
+    "inanimate": 11,
+    "animate": 13
+  },
+  "test_fraction": 0.2,
+  "train_metrics": {
+    "accuracy": 0.8936170212765957,
+    "balanced_accuracy": 0.8931818181818182,
+    "auc": 0.9809090909090908,
+    "confusion_matrix_labels": [
+      "inanimate_0",
+      "animate_1"
+    ],
+    "confusion_matrix": [
+      [
+        39,
+        5
+      ],
+      [
+        5,
+        45
+      ]
+    ]
+  },
+  "test_metrics": {
+    "accuracy": 0.75,
+    "balanced_accuracy": 0.7552447552447552,
+    "auc": 0.8881118881118881,
+    "confusion_matrix_labels": [
+      "inanimate_0",
+      "animate_1"
+    ],
+    "confusion_matrix": [
+      [
+        9,
+        2
+      ],
+      [
+        4,
+        9
+      ]
+    ]
+  },
+  "template_mu0_norm_before_template_normalization": 0.7569384574890137,
+  "template_mu1_norm_before_template_normalization": 0.7550783753395081,
+  "template_cosine_similarity": 0.976075291633606,
+  "weight_vector_norm": 0.2187439203262329,
+  "train_population_norms_before_normalization": {
+    "min": 11.01699447631836,
+    "median": 15.570730209350586,
+    "max": 21.994491577148438
+  },
+  "test_population_norms_before_normalization": {
+    "min": 13.130727767944336,
+    "median": 15.547374725341797,
+    "max": 20.232460021972656
+  }
+}
