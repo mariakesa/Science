@@ -1,0 +1,87 @@
+{
+  "experiment": "normalized_all_neuron_poor_mans_classifier_loo_permutation",
+  "description": "Uses all cleaned neurons. Each stimulus-level population vector is L2-normalized. For each leave-one-out fold, class templates are computed from the remaining stimuli and template-normalized. Prediction is based on cosine similarity to animate vs inanimate templates. Permutation test shuffles labels and repeats the full LOO procedure.",
+  "neural_file": "/home/maria/Science/data/hybrid_neural_responses_reduced.npy",
+  "vit_file": "/home/maria/Science/data/google_vit-base-patch16-224_embeddings_logits.pkl",
+  "vit_key": "natural_scenes",
+  "n_stimuli": 118,
+  "presentation_level_shape": [
+    118,
+    39209
+  ],
+  "stimulus_averaged_shape": [
+    118,
+    39209
+  ],
+  "clean_shape": [
+    118,
+    39209
+  ],
+  "n_clean_neurons": 39209,
+  "used_all_clean_neurons": true,
+  "greedy_selection": false,
+  "loo": true,
+  "row_l2_normalization": true,
+  "class_template_l2_normalization": true,
+  "standardize_neurons": false,
+  "decision_rule": "predict animate if x_hat @ (mu1_hat - mu0_hat) > 0",
+  "presentation_order_assumption": "block",
+  "used_explicit_stimulus_ids": false,
+  "min_presentations_per_stimulus": 1,
+  "max_presentations_per_stimulus": 1,
+  "class_counts_all": {
+    "inanimate": 55,
+    "animate": 63
+  },
+  "true_loo_metrics": {
+    "accuracy": 0.711864406779661,
+    "balanced_accuracy": 0.7128427128427128,
+    "auc": 0.7797979797979798,
+    "confusion_matrix_labels": [
+      "inanimate_0",
+      "animate_1"
+    ],
+    "confusion_matrix": [
+      [
+        40,
+        15
+      ],
+      [
+        19,
+        44
+      ]
+    ]
+  },
+  "n_permutations": 1000,
+  "permutation_p_values": {
+    "accuracy": 0.000999000999000999,
+    "balanced_accuracy": 0.000999000999000999,
+    "auc": 0.000999000999000999
+  },
+  "permutation_null_summary": {
+    "accuracy_mean": 0.49410169491525424,
+    "accuracy_std": 0.06310973252702284,
+    "accuracy_95pct": 0.5932203389830508,
+    "balanced_accuracy_mean": 0.4913131313131313,
+    "balanced_accuracy_std": 0.06373721527815984,
+    "balanced_accuracy_95pct": 0.5902380952380951,
+    "auc_mean": 0.48040721500721495,
+    "auc_std": 0.08009952852532706,
+    "auc_95pct": 0.6029437229437228
+  },
+  "template_cosine_similarity_across_loo": {
+    "min": 0.9771243333816528,
+    "median": 0.9776668548583984,
+    "max": 0.9783976674079895
+  },
+  "weight_norm_across_loo": {
+    "min": 0.207858145236969,
+    "median": 0.2113437056541443,
+    "max": 0.21389511227607727
+  },
+  "population_norms_before_normalization": {
+    "min": 11.01699447631836,
+    "median": 15.561897277832031,
+    "max": 21.994491577148438
+  }
+}

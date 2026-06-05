@@ -1,0 +1,64 @@
+{
+  "experiment": "contrast_distribution_all_neurons",
+  "description": "Computes raw mean animate-inanimate contrast and normalized directional class-template contrast across all cleaned neurons.",
+  "neural_file": "/home/maria/Science/data/hybrid_neural_responses_reduced.npy",
+  "vit_file": "/home/maria/Science/data/google_vit-base-patch16-224_embeddings_logits.pkl",
+  "vit_key": "natural_scenes",
+  "n_stimuli": 118,
+  "stimulus_averaged_shape": [
+    118,
+    39209
+  ],
+  "clean_shape": [
+    118,
+    39209
+  ],
+  "n_clean_neurons": 39209,
+  "standardize_neurons": false,
+  "class_counts": {
+    "inanimate": 55,
+    "animate": 63
+  },
+  "presentation_order_assumption": "block",
+  "used_explicit_stimulus_ids": false,
+  "min_presentations_per_stimulus": 1,
+  "max_presentations_per_stimulus": 1,
+  "template_cosine_similarity": 0.977808952331543,
+  "normalized_contrast_norm": 0.21066981554031372,
+  "raw_contrast_norm": 2.7249786853790283,
+  "mu0_norm_before_template_normalization": 0.7597170472145081,
+  "mu1_norm_before_template_normalization": 0.7527124881744385,
+  "normalized_contrast_distribution": {
+    "min": -0.009992789477109909,
+    "q001": -0.0053891935385763645,
+    "q01": -0.0028791495133191347,
+    "q05": -0.0015001767314970493,
+    "median": 2.7864240109920502e-05,
+    "q95": 0.0016273049404844642,
+    "q99": 0.003177458653226495,
+    "q999": 0.0069168745540082455,
+    "max": 0.016206905245780945,
+    "mean": 5.088018224341795e-05,
+    "std": 0.0010627174051478505
+  },
+  "sign_counts": {
+    "positive": 20245,
+    "negative": 18964,
+    "zero": 0
+  },
+  "contrast_concentration": {
+    "top_k_for_25pct_abs_mass": 2221,
+    "top_k_for_50pct_abs_mass": 6851,
+    "top_k_for_75pct_abs_mass": 14910,
+    "top_k_for_90pct_abs_mass": 23311
+  },
+  "output_files": {
+    "contrast_weights_csv": "/home/maria/Science/thesis/experiments/007--PoorMansClassifier/contrast_distribution_all_neurons/contrast_weights.csv",
+    "hist_normalized_contrast_png": "/home/maria/Science/thesis/experiments/007--PoorMansClassifier/contrast_distribution_all_neurons/hist_normalized_contrast.png",
+    "hist_signed_log_abs_contrast_png": "/home/maria/Science/thesis/experiments/007--PoorMansClassifier/contrast_distribution_all_neurons/hist_signed_log_abs_contrast.png",
+    "top_positive_png": "/home/maria/Science/thesis/experiments/007--PoorMansClassifier/contrast_distribution_all_neurons/top_positive_contrast_neurons.png",
+    "top_negative_png": "/home/maria/Science/thesis/experiments/007--PoorMansClassifier/contrast_distribution_all_neurons/top_negative_contrast_neurons.png",
+    "cumulative_abs_contrast_png": "/home/maria/Science/thesis/experiments/007--PoorMansClassifier/contrast_distribution_all_neurons/cumulative_abs_contrast.png",
+    "raw_vs_normalized_png": "/home/maria/Science/thesis/experiments/007--PoorMansClassifier/contrast_distribution_all_neurons/raw_vs_normalized_contrast.png"
+  }
+}
