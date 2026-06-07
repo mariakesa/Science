@@ -1,0 +1,156 @@
+{
+  "experiment": "logistic_fisher_diagnostics",
+  "neural_file": "/home/maria/Science/data/hybrid_neural_responses_reduced.npy",
+  "vit_file": "/home/maria/Science/data/google_vit-base-patch16-224_embeddings_logits.pkl",
+  "n_stimuli": 118,
+  "presentation_level_shape": [
+    118,
+    39209
+  ],
+  "stimulus_averaged_shape": [
+    118,
+    39209
+  ],
+  "clean_shape": [
+    118,
+    39209
+  ],
+  "n_clean_neurons": 39209,
+  "class_counts": {
+    "inanimate": 55,
+    "animate": 63
+  },
+  "presentation_order_assumption": "block",
+  "used_explicit_stimulus_ids": false,
+  "min_presentations_per_stimulus": 1,
+  "max_presentations_per_stimulus": 1,
+  "test_size": 0.2,
+  "logistic": {
+    "solver": "lbfgs",
+    "C": 1.0,
+    "max_iter": 5000,
+    "class_weight": "balanced",
+    "converged": true,
+    "warning_message": null
+  },
+  "preprocessing": {
+    "row_l2_normalize": true,
+    "train_row_norms_before_normalization": {
+      "min": 11.017495155334473,
+      "median": 15.571321487426758,
+      "max": 21.99540901184082
+    },
+    "test_row_norms_before_normalization": {
+      "min": 13.131230354309082,
+      "median": 15.547985076904297,
+      "max": 20.233200073242188
+    },
+    "standardize_neurons_for_logistic": true,
+    "scaler_used": true
+  },
+  "train_metrics": {
+    "accuracy": 1.0,
+    "balanced_accuracy": 1.0,
+    "auc": 1.0,
+    "confusion_matrix_labels": [
+      "inanimate_0",
+      "animate_1"
+    ],
+    "confusion_matrix": [
+      [
+        44,
+        0
+      ],
+      [
+        0,
+        50
+      ]
+    ]
+  },
+  "test_metrics": {
+    "accuracy": 0.7916666666666666,
+    "balanced_accuracy": 0.7867132867132867,
+    "auc": 0.8531468531468531,
+    "confusion_matrix_labels": [
+      "inanimate_0",
+      "animate_1"
+    ],
+    "confusion_matrix": [
+      [
+        8,
+        3
+      ],
+      [
+        2,
+        11
+      ]
+    ]
+  },
+  "fisher_unregularized_train": {
+    "n_samples": 94,
+    "n_features_effective": 39209,
+    "rank_estimate": 93,
+    "nullspace_dimension_estimate": 39116,
+    "tol": 6.568262698856684e-13,
+    "max_eigenvalue": 31.468963237279247,
+    "min_positive_eigenvalue": 0.25578526377168104,
+    "condition_number_nonzero_spectrum": 123.02883588074512,
+    "n_eigenvalues_returned": 94,
+    "fisher_weight_min": 6.542346712439118e-06,
+    "fisher_weight_median": 0.00019242806368386306,
+    "fisher_weight_max": 0.0006703436064232821,
+    "fisher_weight_mean": 0.0001943760296594538,
+    "n_saturated_prob_lt_001": 44,
+    "n_saturated_prob_gt_099": 50,
+    "n_low_fisher_weight_lt_1e_minus_4": 24
+  },
+  "fisher_l2_regularized_approximation": {
+    "alpha_used": 1.0,
+    "max_regularized_eigenvalue": 32.46896323727925,
+    "min_regularized_eigenvalue": 1.0,
+    "regularized_condition_number": 32.46896323727925,
+    "nullspace_eigenvalues_equal_alpha": 39116
+  },
+  "logistic_weight_norm": 0.41178375482559204,
+  "poor_mans_weight_norm": 2.000000238418579,
+  "cosine_logistic_vs_poor_mans_direction": 0.9233410661613481,
+  "loo_logistic": {
+    "metrics": {
+      "accuracy": 0.711864406779661,
+      "balanced_accuracy": 0.713997113997114,
+      "auc": 0.7962481962481962,
+      "confusion_matrix_labels": [
+        "inanimate_0",
+        "animate_1"
+      ],
+      "confusion_matrix": [
+        [
+          41,
+          14
+        ],
+        [
+          20,
+          43
+        ]
+      ]
+    },
+    "n_converged_folds": 118,
+    "n_folds": 118
+  },
+  "interpretation_flags": {
+    "p_greater_than_n": true,
+    "unregularized_fisher_singular_by_dimension": true,
+    "many_saturated_probabilities": true,
+    "very_low_fisher_weights_present": true
+  },
+  "output_files": {
+    "summary": "/home/maria/Science/thesis/experiments/007--PoorMansClassifier/logistic_fisher_diagnostics/fisher_diagnostics_summary.json",
+    "predictions": "/home/maria/Science/thesis/experiments/007--PoorMansClassifier/logistic_fisher_diagnostics/logistic_predictions.csv",
+    "loo_predictions": "/home/maria/Science/thesis/experiments/007--PoorMansClassifier/logistic_fisher_diagnostics/loo_logistic_predictions.csv",
+    "fisher_spectrum": "/home/maria/Science/thesis/experiments/007--PoorMansClassifier/logistic_fisher_diagnostics/fisher_spectrum.csv",
+    "fisher_spectrum_png": "/home/maria/Science/thesis/experiments/007--PoorMansClassifier/logistic_fisher_diagnostics/fisher_spectrum.png",
+    "fisher_spectrum_log_png": "/home/maria/Science/thesis/experiments/007--PoorMansClassifier/logistic_fisher_diagnostics/fisher_spectrum_log.png",
+    "probability_histogram_png": "/home/maria/Science/thesis/experiments/007--PoorMansClassifier/logistic_fisher_diagnostics/probability_histogram.png",
+    "poor_vs_logistic_weights": "/home/maria/Science/thesis/experiments/007--PoorMansClassifier/logistic_fisher_diagnostics/poor_vs_logistic_weights.csv"
+  }
+}
