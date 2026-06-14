@@ -209,3 +209,4 @@ __marimo__/
 /data
 
 /models
+/thesis/experiments/007--PoorMansClassifier/vit_pc_median_loo_poor_mans_raw

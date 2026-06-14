@@ -1,0 +1,158 @@
+{
+  "experiment": "vit_pc_raw_neural_contrast_vectors",
+  "description": "PCA is fitted to ViT logits. The first 10 PC score vectors are median-split into high/low stimulus groups. For each split, the raw all-neuron poor man's contrast vector is computed as mean(high) - mean(low). No population-vector L2 normalization, no template normalization, and no class-mean normalization are used. Unit-normalized contrast vectors are saved only for pairwise cosine direction comparisons after raw contrasts have been computed.",
+  "neural_file": "/home/maria/Science/data/hybrid_neural_responses_reduced.npy",
+  "vit_file": "/home/maria/Science/data/google_vit-base-patch16-224_embeddings_logits.pkl",
+  "vit_key": "natural_scenes",
+  "n_stimuli": 118,
+  "n_vit_pcs": 10,
+  "presentation_level_shape": [
+    118,
+    39209
+  ],
+  "stimulus_averaged_shape": [
+    118,
+    39209
+  ],
+  "clean_shape": [
+    118,
+    39209
+  ],
+  "n_clean_neurons": 39209,
+  "standardize_neurons": false,
+  "standardize_logits_before_pca": false,
+  "row_l2_normalization": false,
+  "class_template_l2_normalization": false,
+  "class_mean_l2_normalization_before_subtraction": false,
+  "contrast_formula": "w_k = mean(X[PC_k high]) - mean(X[PC_k low])",
+  "median_split_method": "rank-based median split, exactly balanced because N_STIMULI is even",
+  "presentation_order_assumption": "block",
+  "used_explicit_stimulus_ids": false,
+  "min_presentations_per_stimulus": 1,
+  "max_presentations_per_stimulus": 1,
+  "explained_variance_ratio_first_pcs": [
+    0.20716975629329681,
+    0.16322919726371765,
+    0.057096391916275024,
+    0.05397893860936165,
+    0.043098967522382736,
+    0.03137800469994545,
+    0.02791840024292469,
+    0.02680818736553192,
+    0.02065970003604889,
+    0.018223147839307785
+  ],
+  "contrast_summary": [
+    {
+      "pc": 1,
+      "explained_variance_ratio": 0.20716975629329681,
+      "pc_score_median": -0.16298073530197144,
+      "n_low": 59,
+      "n_high": 59,
+      "contrast_norm": 2.461422920227051,
+      "mean_low_norm": 11.41242790222168,
+      "mean_high_norm": 12.209868431091309
+    },
+    {
+      "pc": 2,
+      "explained_variance_ratio": 0.16322919726371765,
+      "pc_score_median": -0.6803392171859741,
+      "n_low": 59,
+      "n_high": 59,
+      "contrast_norm": 2.338982582092285,
+      "mean_low_norm": 12.187402725219727,
+      "mean_high_norm": 11.423563957214355
+    },
+    {
+      "pc": 3,
+      "explained_variance_ratio": 0.057096391916275024,
+      "pc_score_median": 0.5534319877624512,
+      "n_low": 59,
+      "n_high": 59,
+      "contrast_norm": 2.0366954803466797,
+      "mean_low_norm": 11.741252899169922,
+      "mean_high_norm": 11.853785514831543
+    },
+    {
+      "pc": 4,
+      "explained_variance_ratio": 0.05397893860936165,
+      "pc_score_median": -0.7693946361541748,
+      "n_low": 59,
+      "n_high": 59,
+      "contrast_norm": 1.9251794815063477,
+      "mean_low_norm": 11.607318878173828,
+      "mean_high_norm": 11.975746154785156
+    },
+    {
+      "pc": 5,
+      "explained_variance_ratio": 0.043098967522382736,
+      "pc_score_median": -0.5295158624649048,
+      "n_low": 59,
+      "n_high": 59,
+      "contrast_norm": 2.0758678913116455,
+      "mean_low_norm": 11.808145523071289,
+      "mean_high_norm": 11.790567398071289
+    },
+    {
+      "pc": 6,
+      "explained_variance_ratio": 0.03137800469994545,
+      "pc_score_median": -0.998866617679596,
+      "n_low": 59,
+      "n_high": 59,
+      "contrast_norm": 2.097458600997925,
+      "mean_low_norm": 11.764357566833496,
+      "mean_high_norm": 11.836162567138672
+    },
+    {
+      "pc": 7,
+      "explained_variance_ratio": 0.02791840024292469,
+      "pc_score_median": -0.2585456073284149,
+      "n_low": 59,
+      "n_high": 59,
+      "contrast_norm": 1.9785157442092896,
+      "mean_low_norm": 11.925756454467773,
+      "mean_high_norm": 11.663137435913086
+    },
+    {
+      "pc": 8,
+      "explained_variance_ratio": 0.02680818736553192,
+      "pc_score_median": -0.6734855771064758,
+      "n_low": 59,
+      "n_high": 59,
+      "contrast_norm": 1.9447126388549805,
+      "mean_low_norm": 11.766986846923828,
+      "mean_high_norm": 11.820497512817383
+    },
+    {
+      "pc": 9,
+      "explained_variance_ratio": 0.02065970003604889,
+      "pc_score_median": -0.7010583877563477,
+      "n_low": 59,
+      "n_high": 59,
+      "contrast_norm": 2.2271909713745117,
+      "mean_low_norm": 11.680362701416016,
+      "mean_high_norm": 11.93082046508789
+    },
+    {
+      "pc": 10,
+      "explained_variance_ratio": 0.018223147839307785,
+      "pc_score_median": 0.13516631722450256,
+      "n_low": 59,
+      "n_high": 59,
+      "contrast_norm": 2.087693929672241,
+      "mean_low_norm": 12.003788948059082,
+      "mean_high_norm": 11.592388153076172
+    }
+  ],
+  "animacy_contrast_norm": 2.7249789237976074,
+  "n_permutations": 1000,
+  "outputs": {
+    "raw_contrast_vectors": "/home/maria/Science/thesis/experiments/007--PoorMansClassifier/vit_pc_raw_contrast_vectors/vit_pc_contrast_vectors_raw.npy",
+    "unit_contrast_vectors_for_cosine_only": "/home/maria/Science/thesis/experiments/007--PoorMansClassifier/vit_pc_raw_contrast_vectors/vit_pc_contrast_vectors_unit_for_cosine.npy",
+    "contrast_summary": "/home/maria/Science/thesis/experiments/007--PoorMansClassifier/vit_pc_raw_contrast_vectors/vit_pc_contrast_summary.csv",
+    "cosine_matrix": "/home/maria/Science/thesis/experiments/007--PoorMansClassifier/vit_pc_raw_contrast_vectors/vit_pc_contrast_cosine_matrix.csv",
+    "raw_dot_matrix": "/home/maria/Science/thesis/experiments/007--PoorMansClassifier/vit_pc_raw_contrast_vectors/vit_pc_contrast_raw_dot_matrix.csv",
+    "alignment_with_animacy": "/home/maria/Science/thesis/experiments/007--PoorMansClassifier/vit_pc_raw_contrast_vectors/vit_pc_alignment_with_animacy.csv",
+    "permutation_norm_null": "/home/maria/Science/thesis/experiments/007--PoorMansClassifier/vit_pc_raw_contrast_vectors/vit_pc_contrast_norm_permutation_null.csv"
+  }
+}

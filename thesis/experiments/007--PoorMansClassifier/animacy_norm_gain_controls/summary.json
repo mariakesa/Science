@@ -1,0 +1,119 @@
+{
+  "experiment": "animacy_norm_gain_controls",
+  "description": "Tests whether animate-inanimate poor man's decoding is driven by global population response norm/gain. Compares raw difference decoder, norm-only scalar decoder, row-L2-normalized difference decoder, norm-residualized difference decoder, and optional norm-matched subset controls.",
+  "neural_file": "/home/maria/Science/data/hybrid_neural_responses_reduced.npy",
+  "vit_file": "/home/maria/Science/data/google_vit-base-patch16-224_embeddings_logits.pkl",
+  "vit_key": "natural_scenes",
+  "n_stimuli": 118,
+  "presentation_level_shape": [
+    118,
+    39209
+  ],
+  "stimulus_averaged_shape": [
+    118,
+    39209
+  ],
+  "clean_shape": [
+    118,
+    39209
+  ],
+  "n_clean_neurons": 39209,
+  "standardize_neurons": false,
+  "presentation_order_assumption": "block",
+  "used_explicit_stimulus_ids": false,
+  "min_presentations_per_stimulus": 1,
+  "max_presentations_per_stimulus": 1,
+  "animate_count": 63,
+  "inanimate_count": 55,
+  "run_norm_matched_control": true,
+  "matched_subset_size": 104,
+  "outputs": {
+    "loo_metrics": "/home/maria/Science/thesis/experiments/007--PoorMansClassifier/animacy_norm_gain_controls/loo_metrics.csv",
+    "fold_predictions": "/home/maria/Science/thesis/experiments/007--PoorMansClassifier/animacy_norm_gain_controls/fold_predictions.csv",
+    "full_data_axis_diagnostics": "/home/maria/Science/thesis/experiments/007--PoorMansClassifier/animacy_norm_gain_controls/full_data_axis_diagnostics.csv",
+    "matched_subset_stimuli": "/home/maria/Science/thesis/experiments/007--PoorMansClassifier/animacy_norm_gain_controls/matched_subset_stimuli.csv",
+    "kept_neuron_indices": "/home/maria/Science/thesis/experiments/007--PoorMansClassifier/animacy_norm_gain_controls/kept_neuron_indices.csv"
+  },
+  "metrics": [
+    {
+      "subset": "all_stimuli",
+      "decoder": "difference_raw",
+      "loo_accuracy": 0.6694915254237288,
+      "loo_balanced_accuracy": 0.6708513708513708,
+      "n_correct": 79,
+      "n_total": 118,
+      "loo_roc_auc_raw_scores": 0.7777777777777778,
+      "loo_roc_auc_direction_free": 0.7777777777777778
+    },
+    {
+      "subset": "all_stimuli",
+      "decoder": "norm_only",
+      "loo_accuracy": 0.6694915254237288,
+      "loo_balanced_accuracy": 0.656998556998557,
+      "n_correct": 79,
+      "n_total": 118,
+      "loo_roc_auc_raw_scores": 0.6735930735930735,
+      "loo_roc_auc_direction_free": 0.6735930735930735
+    },
+    {
+      "subset": "all_stimuli",
+      "decoder": "difference_row_l2",
+      "loo_accuracy": 0.6779661016949152,
+      "loo_balanced_accuracy": 0.6695526695526695,
+      "n_correct": 80,
+      "n_total": 118,
+      "loo_roc_auc_raw_scores": 0.7772005772005771,
+      "loo_roc_auc_direction_free": 0.7772005772005771
+    },
+    {
+      "subset": "all_stimuli",
+      "decoder": "difference_residualize_norm",
+      "loo_accuracy": 0.652542372881356,
+      "loo_balanced_accuracy": 0.654978354978355,
+      "n_correct": 77,
+      "n_total": 118,
+      "loo_roc_auc_raw_scores": 0.7099567099567099,
+      "loo_roc_auc_direction_free": 0.7099567099567099
+    },
+    {
+      "subset": "norm_matched_subset",
+      "decoder": "difference_raw",
+      "loo_accuracy": 0.7307692307692307,
+      "loo_balanced_accuracy": 0.7307692307692308,
+      "n_correct": 76,
+      "n_total": 104,
+      "loo_roc_auc_raw_scores": 0.7625739644970413,
+      "loo_roc_auc_direction_free": 0.7625739644970413
+    },
+    {
+      "subset": "norm_matched_subset",
+      "decoder": "norm_only",
+      "loo_accuracy": 0.6346153846153846,
+      "loo_balanced_accuracy": 0.6346153846153846,
+      "n_correct": 66,
+      "n_total": 104,
+      "loo_roc_auc_raw_scores": 0.6416420118343196,
+      "loo_roc_auc_direction_free": 0.6416420118343196
+    },
+    {
+      "subset": "norm_matched_subset",
+      "decoder": "difference_row_l2",
+      "loo_accuracy": 0.7596153846153846,
+      "loo_balanced_accuracy": 0.7596153846153846,
+      "n_correct": 79,
+      "n_total": 104,
+      "loo_roc_auc_raw_scores": 0.7525887573964497,
+      "loo_roc_auc_direction_free": 0.7525887573964497
+    },
+    {
+      "subset": "norm_matched_subset",
+      "decoder": "difference_residualize_norm",
+      "loo_accuracy": 0.625,
+      "loo_balanced_accuracy": 0.625,
+      "n_correct": 65,
+      "n_total": 104,
+      "loo_roc_auc_raw_scores": 0.7185650887573964,
+      "loo_roc_auc_direction_free": 0.7185650887573964
+    }
+  ]
+}

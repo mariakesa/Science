@@ -1,0 +1,119 @@
+{
+  "experiment": "animacy_common_direction_decoder",
+  "description": "Leakage-safe leave-one-out decoding of animate/inanimate labels from the common direction m=(mu_animate+mu_inanimate)/2. Axes are recomputed inside each training fold. A 1D threshold and polarity are fitted on training projections only. The script also reports an orthogonalized common-axis control, the standard difference-axis reference, and a norm-only global magnitude control.",
+  "neural_file": "/home/maria/Science/data/hybrid_neural_responses_reduced.npy",
+  "vit_file": "/home/maria/Science/data/google_vit-base-patch16-224_embeddings_logits.pkl",
+  "vit_key": "natural_scenes",
+  "n_stimuli": 118,
+  "clean_shape": [
+    118,
+    39209
+  ],
+  "n_clean_neurons": 39209,
+  "n_animate": 63,
+  "n_inanimate": 55,
+  "standardize_neurons": false,
+  "common_axis_formula": "m = (mean(X_train[y=1]) + mean(X_train[y=0])) / 2",
+  "difference_axis_formula": "w = mean(X_train[y=1]) - mean(X_train[y=0])",
+  "common_orthogonalized_formula": "m_orth = m - ((m @ w) / (w @ w)) * w",
+  "score_common_raw": "score = x @ m",
+  "thresholding": "best 1D threshold and polarity selected on training scores only",
+  "cv": "leave-one-out over stimuli",
+  "decoders": [
+    "common_raw",
+    "common_orthogonalized",
+    "difference_reference",
+    "norm_only"
+  ],
+  "loo_metrics": [
+    {
+      "decoder": "common_orthogonalized",
+      "loo_accuracy": 0.4745762711864407,
+      "loo_balanced_accuracy": 0.45021645021645024,
+      "loo_roc_auc_raw_scores": 0.6349206349206349,
+      "loo_roc_auc_direction_free": 0.6349206349206349,
+      "n_correct": 56,
+      "n_total": 118,
+      "mean_common_cosine_difference_across_folds": 0.34728587254629295,
+      "mean_common_dot_difference_across_folds": 11.117868383051986
+    },
+    {
+      "decoder": "common_raw",
+      "loo_accuracy": 0.652542372881356,
+      "loo_balanced_accuracy": 0.6515151515151515,
+      "loo_roc_auc_raw_scores": 0.7001443001443001,
+      "loo_roc_auc_direction_free": 0.7001443001443001,
+      "n_correct": 77,
+      "n_total": 118,
+      "mean_common_cosine_difference_across_folds": 0.34728587254629295,
+      "mean_common_dot_difference_across_folds": 11.117868383051986
+    },
+    {
+      "decoder": "difference_reference",
+      "loo_accuracy": 0.6694915254237288,
+      "loo_balanced_accuracy": 0.6708513708513708,
+      "loo_roc_auc_raw_scores": 0.7844155844155843,
+      "loo_roc_auc_direction_free": 0.7844155844155843,
+      "n_correct": 79,
+      "n_total": 118,
+      "mean_common_cosine_difference_across_folds": 0.34728587254629295,
+      "mean_common_dot_difference_across_folds": 11.117868383051986
+    },
+    {
+      "decoder": "norm_only",
+      "loo_accuracy": 0.6694915254237288,
+      "loo_balanced_accuracy": 0.656998556998557,
+      "loo_roc_auc_raw_scores": 0.6735930735930735,
+      "loo_roc_auc_direction_free": 0.6735930735930735,
+      "n_correct": 79,
+      "n_total": 118,
+      "mean_common_cosine_difference_across_folds": 0.34728587254629295,
+      "mean_common_dot_difference_across_folds": 11.117868383051986
+    }
+  ],
+  "axis_summary_full_data": [
+    {
+      "quantity": "common_raw",
+      "norm": 11.721142768859863,
+      "dot_with_difference": 11.117562294006348,
+      "cosine_with_difference": 0.3480779230594635
+    },
+    {
+      "quantity": "common_orthogonalized",
+      "norm": 10.988166809082031,
+      "dot_with_difference": -4.6889726945664734e-07,
+      "cosine_with_difference": -1.565991247787224e-08
+    },
+    {
+      "quantity": "difference_reference",
+      "norm": 2.7249786853790283,
+      "dot_with_difference": 7.425509452819824,
+      "cosine_with_difference": 1.0
+    },
+    {
+      "quantity": "mu_animate",
+      "norm": 12.262099266052246,
+      "dot_with_difference": 14.830317497253418,
+      "cosine_with_difference": 0.443835973739624
+    },
+    {
+      "quantity": "mu_inanimate",
+      "norm": 11.319196701049805,
+      "dot_with_difference": 7.404808044433594,
+      "cosine_with_difference": 0.2400684505701065
+    }
+  ],
+  "n_permutations": 1000,
+  "presentation_order_assumption": "block",
+  "used_explicit_stimulus_ids": false,
+  "min_presentations_per_stimulus": 1,
+  "max_presentations_per_stimulus": 1,
+  "outputs": {
+    "loo_predictions": "/home/maria/Science/thesis/experiments/007--PoorMansClassifier/animacy_common_direction_decoder/loo_predictions.csv",
+    "loo_metrics": "/home/maria/Science/thesis/experiments/007--PoorMansClassifier/animacy_common_direction_decoder/loo_metrics.csv",
+    "axis_summary_full_data": "/home/maria/Science/thesis/experiments/007--PoorMansClassifier/animacy_common_direction_decoder/axis_summary_full_data.csv",
+    "permutation_null": "/home/maria/Science/thesis/experiments/007--PoorMansClassifier/animacy_common_direction_decoder/permutation_null.csv",
+    "full_data_axes": "/home/maria/Science/thesis/experiments/007--PoorMansClassifier/animacy_common_direction_decoder/full_data_axes.npz",
+    "summary": "/home/maria/Science/thesis/experiments/007--PoorMansClassifier/animacy_common_direction_decoder/summary.json"
+  }
+}
