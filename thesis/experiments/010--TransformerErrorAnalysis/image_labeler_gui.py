@@ -39,6 +39,12 @@ LABEL_NAMES = {
      1: "animate",
 }
 
+LABEL_NAMES={
+    -1: "unlabeled",
+     0: "everything-else",
+     1: "scenes",
+}
+
 
 class ImageLabeler:
     def __init__(self, root: tk.Tk, image_dir: Path, output_path: Path, max_width: int = 1000, max_height: int = 750):
@@ -234,7 +240,8 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--output",
         type=Path,
-        default=Path("/home/maria/Science/data/image_labels.npy"),
+        #default=Path("/home/maria/Science/data/image_labels.npy"),
+        default=Path("/home/maria/Science/data/scenes_vs_Everything_labels.npy"),
         help="Where to save the .npy labels file",
     )
     parser.add_argument("--max-width", type=int, default=1000)

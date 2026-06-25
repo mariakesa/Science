@@ -1,0 +1,46 @@
+acronym,structure_id,structure_name,cre_filter,n_exact_injection_experiments
+VISp,385,Primary visual area,non_cre,33.0
+VISp,385,Primary visual area,cre,249.0
+VISp,385,Primary visual area,all,282.0
+VISl,409,Lateral visual area,non_cre,4.0
+VISl,409,Lateral visual area,cre,64.0
+VISl,409,Lateral visual area,all,68.0
+VISal,402,Anterolateral visual area,non_cre,1.0
+VISal,402,Anterolateral visual area,cre,17.0
+VISal,402,Anterolateral visual area,all,18.0
+VISrl,417,Rostrolateral visual area,non_cre,
+VISrl,417,Rostrolateral visual area,cre,22.0
+VISrl,417,Rostrolateral visual area,all,22.0
+VISam,394,Anteromedial visual area,non_cre,3.0
+VISam,394,Anteromedial visual area,cre,35.0
+VISam,394,Anteromedial visual area,all,38.0
+VISpm,533,posteromedial visual area,non_cre,1.0
+VISpm,533,posteromedial visual area,cre,27.0
+VISpm,533,posteromedial visual area,all,28.0
+VISpor,312782628,Postrhinal area,non_cre,2.0
+VISpor,312782628,Postrhinal area,cre,34.0
+VISpor,312782628,Postrhinal area,all,36.0
+VISli,312782574,Laterointermediate area,non_cre,2.0
+VISli,312782574,Laterointermediate area,cre,12.0
+VISli,312782574,Laterointermediate area,all,14.0
+VISpl,425,Posterolateral visual area,non_cre,1.0
+VISpl,425,Posterolateral visual area,cre,14.0
+VISpl,425,Posterolateral visual area,all,15.0
+VISa,312782546,Anterior area,non_cre,
+VISa,312782546,Anterior area,cre,17.0
+VISa,312782546,Anterior area,all,17.0
+LGd,170,Dorsal part of the lateral geniculate complex,non_cre,1.0
+LGd,170,Dorsal part of the lateral geniculate complex,cre,24.0
+LGd,170,Dorsal part of the lateral geniculate complex,all,25.0
+LP,218,Lateral posterior nucleus of the thalamus,non_cre,2.0
+LP,218,Lateral posterior nucleus of the thalamus,cre,13.0
+LP,218,Lateral posterior nucleus of the thalamus,all,15.0
+NOT,628,Nucleus of the optic tract,non_cre,1.0
+NOT,628,Nucleus of the optic tract,cre,
+NOT,628,Nucleus of the optic tract,all,1.0
+APN,215,Anterior pretectal nucleus,non_cre,4.0
+APN,215,Anterior pretectal nucleus,cre,9.0
+APN,215,Anterior pretectal nucleus,all,13.0
+SCig,10,"Superior colliculus, motor related, intermediate gray layer",non_cre,
+SCig,10,"Superior colliculus, motor related, intermediate gray layer",cre,
+SCig,10,"Superior colliculus, motor related, intermediate gray layer",all,

@@ -1,0 +1,12 @@
+source_acronym,source_structure_id,n_units_sampled,match_quality,matched_injection_acronym,matched_injection_structure_id,match_note,n_injection_experiments
+CA1,382,107,exact,CA1,382,Exact injection_structure_ids match.,33
+VISrl,417,92,exact,VISrl,417,Exact injection_structure_ids match.,22
+VISl,409,73,exact,VISl,409,Exact injection_structure_ids match.,68
+VISpm,533,72,exact,VISpm,533,Exact injection_structure_ids match.,28
+VISp,385,65,exact,VISp,385,Exact injection_structure_ids match.,282
+VISam,394,63,exact,VISam,394,Exact injection_structure_ids match.,38
+VISal,402,46,exact,VISal,402,Exact injection_structure_ids match.,18
+NOT,628,27,exact,NOT,628,Exact injection_structure_ids match.,1
+DG,726,19,exact,DG,726,Exact injection_structure_ids match.,43
+APN,215,8,exact,APN,215,Exact injection_structure_ids match.,13
+PPT,1061,3,exact,PPT,1061,Exact injection_structure_ids match.,1
